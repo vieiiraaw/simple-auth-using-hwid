@@ -6,13 +6,13 @@ async function init(req, res) {
     const userAgent = req.headers['user-agent'];
 
     if (userAgent != 'know')
-      return res.status(401).json({ message: 'auth: Unauthorized' });
+      return res.status(401).json({ message: 'Unauthorized' });
     if (!version || !applicationId)
-      return res.status(400).json({ message: 'auth: Params undefined' });
+      return res.status(400).json({ message: 'Params undefined' });
 
     const findApplication = await application.findById(applicationId);
     if (!findApplication)
-      return res.status(404).json({ message: 'auth: Application not found' });
+      return res.status(404).json({ message: 'Application not found' });
 
     return res
       .status(200)
