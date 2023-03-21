@@ -2,8 +2,6 @@ const user = require('../database/models/user');
 
 async function login(req, res) {
   try {
-    console.log(req.query);
-
     const { userId, hwid } = req.query;
     const userAgent = req.headers['user-agent'];
 
