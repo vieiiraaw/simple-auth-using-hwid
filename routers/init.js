@@ -1,5 +1,6 @@
 const application = require('../database/models/application');
 
+// test
 async function init(req, res) {
   try {
     const { version, applicationId } = req.query;
