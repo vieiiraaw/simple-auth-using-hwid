@@ -2,8 +2,6 @@ const application = require('../database/models/application');
 
 async function init(req, res) {
   try {
-    console.log(req.query);
-
     const { version, applicationId } = req.query;
     const userAgent = req.headers['user-agent'];
 
